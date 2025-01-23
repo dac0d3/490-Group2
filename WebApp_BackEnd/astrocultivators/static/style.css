@@ -1,0 +1,17 @@
+html, body {
+    height: 100%;
+    width: 100%;
+}
+body {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background-image: url(images/barnsley_dark.png);
+    color: #faebd7;
+}
+#sensor-data {
+    width: 100%;
+}
+.sensor-data-container {
+    min-width: 100%;
+    max-height: 18vh;
+}

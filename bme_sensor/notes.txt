@@ -1,0 +1,16 @@
+plan -- create multiple different writers that update at different rates
+
+seconds csv values - 60 entries
+	every 30 seconds all values are averaged and added to the five minute csv
+five minute csv values - 10 entries
+half hour csv values - 12 entries
+day csv values - 48 entries
+30 day csv values - 30 entries
+
+sensor range
+	Pressure
+		300 hpa - 1100 hpa
+	Temperature
+		-40 C - 85C
+	Humidity
+		0 - 100%

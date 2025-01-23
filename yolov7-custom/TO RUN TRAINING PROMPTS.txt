@@ -1,0 +1,10 @@
+(in yolov7-custom folder)
+python train.py --workers 1 --device 0 --batch-size 4 --epochs 15 --img 810 1080 --data data/custom_data.yaml --hyp data/hyp.scratch.custom.yaml --cfg cfg/training/yolov7-custom.yaml --name yolov7-custom --weights yolov7.pt
+
+to run detection
+python detect.py --weights yolov7_custom.pt --conf 0.5 --img-size 640 --source example.png --view-img --no-trace --save-txt
+
+to run virtual environment (In yolov7 directory)
+source yolov7_custom/bin/activate
+
+	

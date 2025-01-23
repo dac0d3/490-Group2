@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="row justify-content-center align-items-center">
+        
+        <div id="side" class="container col-4 start-0">
+            
+            <h2 class="text-uppercase">terminal</h2>
+            <textarea class="form-control" id="" cols="40" rows="10"></textarea>
+            <button class="btn btn-success mt-2">SUBMIT</button>
+            <h2 class="text-uppercase mt-2">plant health</h2>
+            <p class="bg-secondary bg-gradient p-3 font-monospace text-light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias debitis officiis voluptates nobis aspernatur praesentium, ullam quod id! Iusto, ratione? Qui distinctio dicta quibusdam eos pariatur dolores deserunt maiores dolorem rem reiciendis similique dignissimos velit quaerat, voluptate blanditiis voluptatem delectus, sequi laudantium inventore! Omnis hic vero in unde ullam nulla.</p>
+            
+            <div class="row justify-content-around">
+                <button class="btn rounded btn-lg btn-outline-primary text-uppercase">Reset</button>
+                <button class="btn rounded btn-lg btn-danger text-uppercase">STOP</button>
+            </div>
+
+        </div>
+
+        <main role="main" class="container col-8">
+            <div id="sensor-data">
+                <div class="sensor-data-container">
+                    <canvas id="temperature" width="700%" height="150%"><p class="canvas-error">Could not create chart.</p></canvas>
+                </div>
+                <div class="sensor-data-container">
+                        <canvas id="pressure" width="700%" height="150%"><p class="canvas-error">Could not create chart.</p></canvas>
+                </div>
+                <div class="sensor-data-container">
+                    <canvas id="humidity" width="700%" height="150%"><p class="canvas-error">Could not create chart.</p></canvas>
+                </div>
+            </div>
+            <button class="btn btn-primary mt-2" onclick="handlePictureButton()">Take Picture</button>
+            
+            <div class="row image-container pt-3">
+                
+                <div class="col-4 ">
+                    <div class="img-container"><img src={{ rgb_image }} alt="" class="img-thumbnail" id="rgb-image"></div>
+                    <div class="img-title">RBG</div>
+                </div>
+                <div class="col-4 ">
+                    <div class="img-container"><img src={{ objdet_image }} alt="" class="img-thumbnail" id="objdet-image"></div>
+                    <div class="img-title">Object Detection</div>
+                </div>
+                <div class="col-4 ">
+                    <div class="img-container"><img src={{ hyperspectral_image }} class="img-thumbnail" id="hyperspectral-image"></div>
+                    <div class="img-title">Hyperspectral</div>
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+
+    <div class="col-12 display-4 text-center fixed-bottom pb-2">
+        
+        <div class="btn-group dropup">
+            
+            <button class="btn btn-secondary btn-lg" type="button">
+              Container Schedule
+            </button>
+            
+            <button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            
+            <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

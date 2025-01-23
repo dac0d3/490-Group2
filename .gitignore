@@ -1,0 +1,9 @@
+
+###Ignore Virtual Environment dependencies###
+/WebApp_BackEnd/.venv
+/yolov7-custom/yolov7_custom
+
+###Ignore all pycache###
+**/__pycache__/
+
+.DS_Store
