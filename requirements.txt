@@ -1,0 +1,14 @@
+# Django: The web framework
+Django
+
+# PyTorch (CPU-only, or CPU+CUDA; pick version appropriate for your setup)
+torch
+
+# If you're using any torchvision transforms or PyTorch model zoo
+torchvision
+
+# YOLOv8 (Ultralytics) for detection
+ultralytics
+
+# Pillow is needed for image handling (PIL)
+Pillow

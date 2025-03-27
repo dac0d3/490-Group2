@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Florasight - Plant Identification</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <!-- (Note: The TensorFlow.js script tag is omitted since we're using PyTorch on the backend) -->
+</head>
+<body>
+  <div class="container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <div class="logo-container">
+        <div class="logo">FLORASIGHT</div>
+      </div>
+      <div class="button-container">
+        <button id="connectBtn" class="control-btn">Connect</button>
+        <button id="identifyBtn" class="control-btn">Identify</button>
+      </div>
+    </div>
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <div class="camera-panel">
+        <div class="stream-container">
+          <video id="videoElement" autoplay playsinline muted></video>
+          <canvas id="canvasElement" style="display: none;"></canvas>
+          <div class="stream-status">Live Feed</div>
+        </div>
+      </div>
+      <div class="description-panel">
+        <h2>Plant Information:</h2>
+        <div id="plantInfo" class="plant-info-container">
+          <p class="placeholder-text">Connect camera and click 'Identify' to analyze plant</p>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="/static/axios.min.js"></script>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
