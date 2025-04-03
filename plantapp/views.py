@@ -53,7 +53,6 @@ def predict(request):
             # 5) Read the uploaded file into a PIL image
             img_bytes = file.read()
             image = Image.open(io.BytesIO(img_bytes)).convert("RGB")
-            open_cv_image = numpy.array(image)
             # 6) Run YOLO detection
             # model(...) returns a list of results; we’ll grab the first one
             results = model(image)  # or model.predict(image) in some versions
@@ -75,7 +74,6 @@ def predict(request):
                         "confidence": confidence,
                         "box": xyxy,
                     })
-                cv2.imshow('Webcam', open_cv_image)
             else:
                 # If this is a classification model, you’d parse differently
                 # But YOLOv8 classification typically uses result.probs
