@@ -9,9 +9,9 @@ model.eval()
 
 def get_prediction(img_array):
     results = model(img_array)  # includes NMS
+    annotator = Annotator(img_array)
     for r in results:
 
-        annotator = Annotator(img_array)
 
         boxes = r.boxes
         for box in boxes:
