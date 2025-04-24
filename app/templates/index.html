@@ -22,6 +22,8 @@
     <script src="http://code.highcharts.com/highcharts-more.js"></script>
     <script src="http://code.highcharts.com/modules/exporting.js"></script>
 
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+
 </head>
 <body class="text-center">
     <div class="container">
@@ -47,7 +49,7 @@
       <div class="description-panel">
         <h2>Plant Information:</h2>
         <div id="plantInfo" class="plant-info-container">
-          <p class="placeholder-text">Connect camera and click 'Identify' to analyze plant</p>
+            <div hx-get="{{ url_for('views.data_feed') }}" hx-trigger="every 0.1s"></div>
         </div>
       </div>
     </div>
