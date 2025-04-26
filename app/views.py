@@ -23,6 +23,10 @@ def gen(camera):
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
 
+def data_gen(camera):
+        json_data = camera.get_data()
+        return json_data
+
 
 # @views.route('/video_feed')
 # def video_feed():

@@ -7,7 +7,6 @@ def create_app():
 
     from .views import views
     from .restapi import  restapi
-    from .camera import VideoCamera
     from .sensors import sensors
     app.register_blueprint(views, url_prefix='/')
     restapi.register_blueprint(views, url_prefix='/')
