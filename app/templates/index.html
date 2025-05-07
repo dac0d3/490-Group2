@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Florasight - Plant Identification</title>
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <!-- Bootstraps Java Scipts Links -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+
+
+    <!-- JQuery links  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+
+    <!--High CHART LIVE  -->
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+    <script src="http://code.highcharts.com/highcharts-more.js"></script>
+    <script src="http://code.highcharts.com/modules/exporting.js"></script>
+
+    <script src="https://unpkg.com/htmx.org@1.7.0"></script>
+
+
+
+</head>
+<body class="text-center">
+    <div class="container">
+    <!-- Left Panel -->
+    <div class="left-panel">
+      <div class="logo-container">
+        <div class="logo">FLORASIGHT</div>
+            </div>
+        <div class="button-container">
+            <button id="connectBtn" class="control-btn">Connect</button>
+            <button id="identifyBtn" class="control-btn">Identify</button>
+        </div>
+    </div>
+    <!-- Right Panel -->
+    <div class="right-panel">
+      <div class="camera-panel">
+        <div class="stream-container">
+            <div id="plantStream">No camera connected, please press the connect button to initialize camera</div>
+
+        </div>
+      </div>
+      <div class="description-panel">
+        <h2>Plant Information:</h2>
+        <div id="plantInfo" class="plant-info-container">
+            <p class="placeholder-text">Connect camera and click 'Identify' to analyze plant</p>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+    <div class="container-fluid">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="container-fluid" id="data-temperature">
+
+            </div>
+        </div>
+    </div>
+<br>
+<br>
+<br>
+
+
+
+    <div class="container-fluid">
+        <!-- Example row of columns -->
+        <div class="row">
+            <div class="container-fluid" id="data-humidity">
+
+            </div>
+        </div>
+    </div>
+  </div>
+    <script src="/static/script.js"></script>
+    <script src="/static/chart.js"></script>
+  </body>
+</html>
